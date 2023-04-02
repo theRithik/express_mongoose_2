@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Showing Data</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Product price</th>
+                    <th>Product Description</th>
+        
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var i=0; i<productsData.length;i++){%>
+                    <tr>
+                        <td><%= productsData[i].productName %></td>
+                        <td><%= productsData[i].productPrice %></td>
+                        <td><%= productsData[i].productDescription %></td>
+                    </tr>
+                <% } %>   
+            </tbody>
+           
+            
+        </table>
+    </body>
+</html>
