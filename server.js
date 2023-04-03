@@ -14,7 +14,7 @@ app.set('view engine','ejs')
 app.use('/products',productRoutes)
 
 app.get('/',(req,res)=>{
-    res.render('products.ejs')
+    res.render('index.ejs')
 })
 
 app.listen(3000,()=>{
