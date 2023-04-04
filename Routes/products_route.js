@@ -31,6 +31,17 @@ route.get('/',(req,res)=>{
     })
 })
 
+
+route.post('/updateProducts',(req,res)=>{
+    product.updateOne({productName:req.body.productName},{$set:{productPrice:req.body.productPrice}},(err,result)=>{
+       if(err){
+        console.log(err)
+       }
+       else{
+        res.redirect('/products')
+       }
+    })
+
 route.post('/delete',(req,res)=>{
     product.findOneAndDelete({_id:req.body.id},(err,result)=>{
         if(err){
