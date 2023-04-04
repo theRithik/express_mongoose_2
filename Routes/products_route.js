@@ -41,6 +41,7 @@ route.post('/updateProducts',(req,res)=>{
         res.redirect('/products')
        }
     })
+})
 
 route.post('/delete',(req,res)=>{
     product.findOneAndDelete({_id:req.body.id},(err,result)=>{
