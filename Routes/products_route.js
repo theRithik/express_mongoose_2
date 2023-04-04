@@ -3,7 +3,6 @@ const route = express.Router()
 const app = express()
 const product = require('../model/products')
 
-
 route.get('/',(req,res)=>{
     res.render('products.ejs')
 })
